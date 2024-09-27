@@ -22,8 +22,7 @@ const toggleMobileMenu = () => {
             to="/"
             class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
             aria-current="page"
-            active-class="bg-white text-black"
-            exact-active-class="bg-white text-black"
+            active-class="bg-gray-500 text-black"
           >
             Home
           </RouterLink>
@@ -31,8 +30,7 @@ const toggleMobileMenu = () => {
             to="/jokes"
             class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-gray-700"
             aria-current="page"
-            active-class="bg-white text-black"
-            exact-active-class="bg-white text-black"
+            active-class="bg-gray-500 text-black"
           >
             Jokes
           </RouterLink>
@@ -73,8 +71,7 @@ const toggleMobileMenu = () => {
           to="/"
           class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700"
           aria-current="page"
-          active-class="bg-white text-black"
-          exact-active-class="bg-white text-black"
+          active-class="bg-gray-500 text-black"
         >
           Home
         </RouterLink>
@@ -82,8 +79,7 @@ const toggleMobileMenu = () => {
           to="/jokes"
           class="block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-gray-700"
           aria-current="page"
-          active-class="bg-white text-black"
-          exact-active-class="bg-white text-black"
+          active-class="bg-gray-500 text-black"
         >
           Jokes
         </RouterLink>
