@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between mt-4 items-center">
+  <div class="flex justify-center mt-4 items-center">
     <button
       @click="$emit('prev')"
       :disabled="currentPage === 1"
@@ -8,7 +8,7 @@
       Previous
     </button>
 
-    <span> Page {{ currentPage }} of {{ totalPages }} </span>
+    <span class="mx-4">Page {{ currentPage }} of {{ totalPages }}</span>
 
     <button
       @click="$emit('next')"
