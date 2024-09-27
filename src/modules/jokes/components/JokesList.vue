@@ -11,7 +11,7 @@
 
     <JokesSorter :sortAscending="sortAscending" @sortChange="toggleSortOrder" />
 
-    <div class="flex space-x-4 mb-4">
+    <div v-if="savedFavourites.length > 0" class="flex space-x-4 mb-4">
       <button @click="toggleShowFavourites" class="px-4 py-2 bg-blue-500 text-white rounded">
         <i class="pi pi-filter"></i>
         {{ showFavourites ? 'Show All Jokes' : 'Show Only Favourite Jokes' }}
@@ -68,6 +68,7 @@ import JokesFilter from './JokesFilter.vue'
 import JokesSorter from './JokesSorter.vue'
 import Pagination from '@/components/common/pagination/AppPagination.vue'
 import AppLoader from '@/components/common/AppLoader.vue'
+import { computed } from 'vue'
 
 const {
   paginatedJokes,
@@ -84,7 +85,9 @@ const {
   onPrevPage,
   toggleShowFavourites,
   showFavourites,
-  toggleFavourite,
-  onClearFavourites
+  onClearFavourites,
+  toggleFavourite
 } = useJokes()
+
+const savedFavourites = computed(() => paginatedJokes.value.filter((joke) => joke.isFavourite))
 </script>
